@@ -1,2 +1,4 @@
 # The Concept
-It's not easy to visualize and make playes enjoy the process of tech researching. I'm using the word "climbing" here due to a certain old backstory which abstracted human being's complete lore as a tree, more precisely, a *Quercus dentata* oak tree.
+It's not easy to visualize and make players enjoy the process of tech researching. I'm using the word "climbing" here due to a certain old backstory which abstracted human being's complete lore as a tree, more precisely, a *Quercus dentata* oak tree. In this perspective, studying into new fields of science (or other fields, such as witchery or branches of occultism) is no more than climbing the tree. Not everyone will enjoy climbing trees, but as tech research plays an essential part of this mod, we should do something to provide a more vivid, playable and plausible realization to convert the process into an interactable "recipe" (in some GUIs) that players could act on.
+
+In many currently available attempts, this would point to mini-games. Maybe you are familiar with the research mini-games of Thaumcraft, it's just something like that.
