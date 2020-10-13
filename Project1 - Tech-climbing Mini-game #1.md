@@ -21,10 +21,10 @@ The game will start with a 9\*9 (or maybe bigger, such as 12\*12 or 16\*16) grid
 │S│ │ │X│ │
 └─┴─┴─┴─┴─┘
 ```
-Two of the corners, located upper-right and lower-left are *"start"* and *"goal"* (as marked above with "S" and "G") in the game. The only thing player should do is *to flip the squares so that T squares will pave a path from S to G*.
+Two of the corners, located upper-right and lower-left are *"start"* and *"goal"* (as marked above with "S" and "G") in the game. The only thing a player should do is *to flip the squares so that T squares will pave a path from S to G*.
 
 Obviously, it will be too easy to solve (and however not interesting to play) if the player could flip the squares one by one, thus there should be some mechanisms to lift restrictions and expenses to be paid. Two basic rules should be added:
-1. Solution should be given within certain steps;
+1. Solution should be given within certain number of steps;
 2. Every operation will flip all the squares (more than one) in a certain area at once.
 
 For example, we can set the area flipped of a single operation "+" shape (the suqare clicked plus four neighboring suqares), so a normal operation will work like this:
@@ -38,3 +38,12 @@ For example, we can set the area flipped of a single operation "+" shape (the su
 └─┴─┴─┘    └─┺━┹─┘
 ```
 Where all the squares inside the bold "+"-shaped frame are flipped.
+
+## Additional Rules
+The game may still be too easy or boring will just two rules given above, so different rule sets could be added according to needs. Such as:
+- Randomly chosen squares on the board should be in a certain state (H or T) in the end;
+- Random edges are chosen in the beginning, and the two squares sharing this edge must be in different states in the end (such as H|T or T|H, but H|H or T|T is not allowed).
+- "Damaged" board, with some of the squares unavailable to flip.
+
+## Simple Topology Game
+Now I only retain the flipping gameplay (abandoning the start-to-goal paving game), to turn this game into something that implicates some basic topological ideas. Matching the *genus* of two 2D shapes through flipping may be friendly enough to play.
