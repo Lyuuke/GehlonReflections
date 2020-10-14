@@ -45,5 +45,29 @@ The game may still be too easy or boring will just two rules given above, so dif
 - Random edges are chosen in the beginning, and the two squares sharing this edge must be in different states in the end (such as H|T or T|H, but H|H or T|T is not allowed).
 - "Damaged" board, with some of the squares unavailable to flip.
 
+With there rules implemented, I would call the game "Tech-climbing Mini-game Prototype", or TCM-P.
+
 ## Simple Topology Game
 Now I only retain the flipping gameplay (abandoning the start-to-goal paving game), to turn this game into something that implicates some basic topological ideas. Matching the *genus* of two 2D shapes through flipping may be friendly enough to play.
+
+Firstly, a closed 2D figure will be given as reference. Player must flip the squares to pave a curve, not to connect two corners this time, but to form a closed figure sharing the same value of *genus* with the given figure. For example, we start with a "O" shaped figure, and do the puzzle:
+```
+┌─┬─┬─┬─┬─┐
+│ │X│X│X│X│
+├─┼─┼─┼─┼─┤
+│X│X│ │X│X│
+├─┼─┼─┼─┼─┤
+│X│ │ │X│X│
+├─┼─┼─┼─┼─┤
+│X│X│X│X│ │
+├─┼─┼─┼─┼─┤
+│ │ │ │X│ │
+└─┴─┴─┴─┴─┘
+```
+
+On this board, T squares encircled an area and formed a figure with *genus = 1*, identical to the "O" shape. However, if the given figure is "8"-shaped (whose *genus = 2*), then the board above will not match.
+
+This topology-related version will be called "Tech-climbing Mini-game of Topology", or TCM-T.
+
+# Program Realization
+## TCM-P
