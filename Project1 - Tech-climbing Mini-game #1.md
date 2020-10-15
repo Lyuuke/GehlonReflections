@@ -71,3 +71,27 @@ This topology-related version will be called "Tech-climbing Mini-game of Topolog
 
 # Program Realization
 ## TCM-P
+
+The difficulty in TCM-P depends on whether a "path check" should be visually shown to the player, *i.e.* so that players could see the *shortest path* connecting S and G in their solutions. This is envolved with the *shortest path problem of an undirected graph*, which requires some graph theory basics to ponder on. I'll just skip this for now because of my yet poor graph theory knowledge.
+
+Despite this problem, TCM-P is actually quite simple. Just start from a set containing only S (if it is T), and append every T suqares neighboring to the elements in the set, to the set itself. Finally we will obtain all the T squares connecting to S, then the solution passes if and only if G is in the set.
+
+## TCM-T
+
+As for TCM-T, the main difficulty is how to determine the *genus* of a figure. We should start from clustering all the T squares on the board into several sets, where squares in the same set connect to each other, while do not dirrectly connect to the ones in other sets. Then traverse the H squares and inspect the rows and columns in four directions:
+```
+     * this col
+┌─┬─┬─┬─┬─┐
+│ │ │X│X│X│
+├─┼─┼─┼─┼─┤
+│X│X│ │X│X│
+├─┼─┼─┼─┼─┤
+│X│ │#│X│X│ * this row
+├─┼─┼─┼─┼─┤
+│X│ │X│X│X│
+├─┼─┼─┼─┼─┤
+│ │X│X│ │ │
+└─┴─┴─┴─┴─┘
+```
+
+If this H square is *enclosed* by a figure, we can expect that *the first T squares encountered in four directions of this H square are 4 elements of a same set*. It there is no T square in any direction, or four T squares encountered belong to different T square sets, then we abandon it and inspect the next H square.
