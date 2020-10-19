@@ -94,4 +94,7 @@ As for TCM-T, the main difficulty is how to determine the *genus* of a figure. W
 └─┴─┴─┴─┴─┘
 ```
 
-If this H square is *enclosed* by a figure, we can expect that *the first T squares encountered in four directions of this H square are 4 elements of a same set*. It there is no T square in any direction, or four T squares encountered belong to different T square sets, then we abandon it and inspect the next H square.
+If this H square is *enclosed* by a figure F, we can expect that *the first T squares encountered by going towards four directions starting from this H square are 4 elements of set F*. If there is no T square in any direction, or four T squares encountered belong to different T square sets, then we abandon it and inspect the next H square.
+
+Once we find an *enclosed* H, it will be easy to sort out all the H's connecting to it, which constitute the whole area that figure F encloses. We just skip these squares and continue the traverse.
+
