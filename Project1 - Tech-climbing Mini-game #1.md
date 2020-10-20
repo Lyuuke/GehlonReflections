@@ -96,5 +96,17 @@ As for TCM-T, the main difficulty is how to determine the *genus* of a figure. W
 
 If this H square is *enclosed* by a figure F, we can expect that *the first T squares encountered by going towards four directions starting from this H square are 4 elements of set F*. If there is no T square in any direction, or four T squares encountered belong to different T square sets, then we abandon it and inspect the next H square.
 
-Once we find an *enclosed* H, it will be easy to sort out all the H's connecting to it, which constitute the whole area that figure F encloses. We just skip these squares and continue the traverse.
+Once we find an *enclosed* H, it will be easy to sort out all the H's connecting to it, which constitute the whole area that figure F encloses. Just skip these squares and continue the traverse. By finishing the traverse, we'll find all the enclosed areas.
 
+However, the process stated above is still flawed. It is not able to handle conditions like this:
+```
+┌─┬─┬─┬─┬─┐
+│ │ │X│X│ │
+├─┼─┼─┼─┼─┤
+│X│ │#│X│X│
+├─┼─┼─┼─┼─┤
+│X│X│X│X│ │
+└─┴─┴─┴─┴─┘
+```
+
+The `#` square satisfies the condition, but it is obviously not enclosed. Thus we should add an extra requirement to ensure that the figure is actually closed.
